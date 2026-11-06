@@ -1,0 +1,48 @@
+PROYECTO BASE - EJERCICIO PRÁCTICO EP2
+RutaActiva - DSY1102 Programación Orientada a Objetos
+===================================================
+
+CONTENIDO
+---------
+pom.xml                                       Maven + Java 21 + JavaFX 21.0.6 (Gson pendiente).
+src/main/java/cl/duoc/rutaactiva/
+    Launcher.java                             Ejecutar esta clase, NO App.
+    App.java                                  Carga la vista principal JavaFX.
+src/main/java/cl/duoc/rutaactiva/model/
+    Arrendable.java                           Interfaz de arriendo.
+    Vehiculo.java                             Clase abstracta y validaciones comunes.
+    Bicicleta.java                            Vehículo con marca y opción eléctrica.
+    Scooter.java                              Vehículo con opción premium.
+src/main/resources/cl/duoc/rutaactiva/view/  Carpeta FXML inicialmente vacía.
+
+ABRIR EN INTELLIJ
+-----------------
+1. Descomprime el ZIP y abre la carpeta RutaActiva_EP2_Base en IntelliJ IDEA.
+2. Confirma el JDK 21 y recarga el proyecto Maven.
+3. Ejecuta cl.duoc.rutaactiva.Launcher (no App).
+4. Primero crea view/main-view.fxml; mientras no exista se mostrará
+   "No se encontró la vista principal". Esto es ESPERADO.
+5. Puedes ejecutar alternativamente: mvn javafx:run.
+
+DESARROLLO QUE DEBE REALIZAR EL ESTUDIANTE
+-----------------------------------------
+- Agregar Gson a pom.xml en el comentario indicado.
+- Crear el FXML (una ventana) y controller/MainController.java.
+- Crear repository/VehiculoRepository.java y dao/BicicletaDAO.java / ScooterDAO.java.
+- Leer al iniciar y guardar al registrar o eliminar, en bicicletas.json / scooters.json.
+- La tabla muestra Tipo, Código, Nombre, Horas y Tarifa.
+- Sin JSON previo, comenzar con listas vacías y sin error.
+
+OPERACIONES DEL MODELO ENTREGADO
+--------------------------------
+Vehiculo: getCodigo/setCodigo, getNombre/setNombre, getHoras/setHoras,
+          getTipo, calcularTarifa, toString.
+          Código y nombre obligatorios; horas enteras entre 1 y 60.
+Bicicleta: Bicicleta(codigo,nombre,horas,marca,electrica),
+           getMarca/setMarca, isElectrica/setElectrica.
+           $2.500/hora, más 20% si es eléctrica; marca obligatoria.
+Scooter: Scooter(codigo,nombre,horas,premium),
+         isPremium/setPremium; $1.800/hora, más 15% si es premium.
+Arrendable: permiteArriendo().
+
+NOTA: No modifiques las clases del modelo ni App/Launcher.

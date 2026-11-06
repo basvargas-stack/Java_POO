@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="cl.duoc.f_jvfx2.controller.BuscarController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Button fx:id="btnVolver" layoutX="534.0" layoutY="361.0" mnemonicParsing="false" onAction="#onVolverButtonClick" text="Volver">
+            <font>
+                <Font name="Arial" size="12.0" />
+            </font>
+        </Button>
+    </children>
+
+</AnchorPane>
